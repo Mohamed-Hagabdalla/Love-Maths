@@ -34,11 +34,11 @@ function runGame(gameType) {
         document.getElementById("answer-box").value = "";
         document.getElementById("answer-box").focus();
 
-        //Num1 and Num2 below are two random numbers between 1 and 25, Num3 and Num4 below are two random numbers between 1 and 50
+        //Num1 and Num2 below are two random numbers between 1 and 25, Num3 is the product of Num1 and Num2 and Num4 is equal to Num2
         let num1 = Math.floor(Math.random() * 25) + 1; 
         let num2 = Math.floor(Math.random() * 25) + 1;
-        let num3 = Math.floor(Math.random() * 50) + 1;
-        let num4 = Math.floor(Math.random() * 50) + 1;
+        let num3 = num1 * num2;
+        let num4 = num2;
 
         if (gameType === "addition") {
             displayAdditionQuestion(num1, num2);
